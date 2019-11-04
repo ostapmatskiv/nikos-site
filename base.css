@@ -1,0 +1,22 @@
+/* до всіх html тегів які тільки можуть бути застосувати "обнулення" */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	width: 90%;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+.row-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.row-flex.column { flex-direction: column; height: 100% }
+.row-flex.wrap { flex-wrap: wrap }
+.text-center { text-align: center }
