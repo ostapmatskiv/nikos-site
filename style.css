@@ -91,8 +91,34 @@ section.rooms article img {
 }
 section.rooms article p { margin-bottom: 30px }
 section.rooms article button { margin-left: 15px; background: #1b5e7b }
+
+section.rooms article div:first-child::before {
+	opacity: 0;
+	transition: all 1s;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 30px;
+	color: #fff;
+	content: '\f00e';
+	position: absolute;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
+}
+section.rooms article div:first-child:hover::before {
+	opacity: 1;
+}
 section.rooms article:hover {
 	background: #4d8e97;
 	color: #fff
 }
-section.rooms article:hover img { transform: scale(1.1); }
+section.rooms article:hover img { transform: scale(1.15) rotate(5deg) }
