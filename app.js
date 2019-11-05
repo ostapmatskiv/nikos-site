@@ -1,4 +1,4 @@
-document.body.style.background = 'red';
-if(confirm('delete red bg?')) {
-	document.body.style.background = '';
-}
+// document.body.style.background = 'green';
+// if(confirm('delete red bg?')) {
+// 	document.body.style.background = '';
+// }
