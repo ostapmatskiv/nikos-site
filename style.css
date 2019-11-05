@@ -1,3 +1,15 @@
+.button {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	border: 1px solid #fff;
+	border-radius: 30px;
+}
+.button:hover {
+	background: #fff;
+	color: #000
+}
+
 header {
 	height: 100vh;
 	background-image: url(http://spacialtheme.herokuapp.com/3.0/images/unsplash/sunset.jpg);
@@ -44,17 +56,8 @@ header div:last-child a {
 	color: #fff;
 	text-decoration: none;
 }
-header h4 {
-	margin: 15px 0 35px;
-}
-.button {
-	color: #fff;
-	text-decoration: none;
-	padding: 10px 20px;
-	border: 1px solid #fff;
-	border-radius: 30px;
-}
-.button:hover {
-	background: #fff;
-	color: #000
+header h4 { margin: 15px 0 35px }
+
+main {
+	height: 100vh;
 }
