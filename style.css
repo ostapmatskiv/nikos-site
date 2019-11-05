@@ -122,3 +122,63 @@ section.rooms article:hover {
 	color: #fff
 }
 section.rooms article:hover img { transform: scale(1.15) rotate(5deg) }
+
+
+#cart {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	display: none;
+}
+#cart div {
+	background: #fff;
+	padding: 15px;
+	min-width: 500px;
+	position: relative;
+}
+#cart div > i.fa-times-circle {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	cursor: pointer;
+}
+#cart table {
+	border-collapse: collapse;
+	margin: 15px 0;
+	width: 100%;
+}
+#cart table td {
+	padding: 5px;
+	border: 1px solid grey;
+}
+#cart table tbody td:last-child {
+	text-align: center;
+}
+#cart table tbody tr:nth-child(odd) td {
+	background: #eee;
+}
+#cart table thead td,
+#cart table tfoot td {
+	background: #1b5e7b;
+	border-color: #fff;
+	color: #fff
+}
+#cart table tfoot td {
+	text-align: right;
+	font-weight: bold;
+}
+#cart table button {
+	background: none;
+	border: none;
+}
