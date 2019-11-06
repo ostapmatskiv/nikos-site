@@ -10,6 +10,7 @@
 	background: #fff;
 	color: #000
 }
+section { margin-bottom: 50px }
 
 header {
 	height: 100vh;
@@ -143,8 +144,9 @@ section.rooms article:hover img { transform: scale(1.15) rotate(5deg) }
 }
 #cart div {
 	background: #fff;
-	padding: 15px;
+	padding: 30px 20px;
 	min-width: 500px;
+	width: 50%;
 	position: relative;
 }
 #cart div > i.fa-times-circle {
