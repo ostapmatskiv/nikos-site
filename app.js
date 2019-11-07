@@ -41,7 +41,12 @@ function addProductToCart() {
 	tr.appendChild(td3); // додаємо клітинку до рядка
 
 	var td4 = document.createElement('td'); // створюємо 4-у клітинку
-	td4.innerText = '1'; // клітинці 4 задаємо текст
+	var input = document.createElement('input'); // створюємо 4-у клітинку
+	input.type = 'number';
+	input.min = 1;
+	input.value = 1;
+	input.onchange = setProductSum;
+	td4.appendChild(input); // додаємо клітинку до рядка
 	tr.appendChild(td4); // додаємо клітинку до рядка
 
 	var td5 = document.createElement('td'); // створюємо 5-у клітинку
@@ -49,11 +54,54 @@ function addProductToCart() {
 	tr.appendChild(td5); // додаємо клітинку до рядка
 
 	var td6 = document.createElement('td'); // створюємо 6-у клітинку
-	td6.innerHTML = '<button>x</button>'; // клітинці 6 задаємо кнопку
+	var button = document.createElement('button'); // створюємо button
+	button.innerText = 'x';
+	button.onclick = deleteProduct;
+	td6.appendChild(button); // додаємо button до клітинк
 	tr.appendChild(td6); // додаємо клітинку до рядка
 
 	var table = cart.querySelector('table tbody'); // знаходимо тіло таблиці у cart
 	table.appendChild(tr); // додаємо до таблиці новостворений рядок
 	
+	recalcCart();
 	openCart (); // виводимо корзину
+}
+
+function deleteProduct() {
+	var tr = this.closest('tr');
+	var tbody = this.closest('tbody');
+	tbody.removeChild(tr);
+	nextI--;
+	recalcCart();
+}
+
+function setProductSum() {
+	var amount = this.value;
+	var price = this.parentElement.previousElementSibling.innerText;
+	var firstSymbol = price.substr(0, 1); // отримуємо перший символ
+	if(firstSymbol == '$') // перевіряємо чи перший символ є доларом
+		price = price.substr(1); // обрізаємо долар (перший символ у ціні)
+	price = parseInt(price); // перетворюємо текст на число
+	var sum = amount * price;
+	this.parentElement.nextElementSibling.innerText = '$' + sum;
+	recalcCart();
+}
+
+function recalcCart() {
+	var td = cart.querySelectorAll('tbody tr td:first-child');
+	for (var i = 0; i < td.length; i++) {
+		td[i].innerText = i + 1;
+	}
+
+	var allSum = 0;
+	var td = cart.querySelectorAll('tbody tr td:nth-child(5)');
+	for (var i = 0; i < td.length; i++) {
+		var price = td[i].innerText;
+		var firstSymbol = price.substr(0, 1); // отримуємо перший символ
+		if(firstSymbol == '$') // перевіряємо чи перший символ є доларом
+			price = price.substr(1); // обрізаємо долар (перший символ у ціні)
+		price = parseInt(price); // перетворюємо текст на число
+		allSum += price;
+	}
+	cart.querySelector('tfoot td:first-child').innerText = '$' + allSum;
 }
