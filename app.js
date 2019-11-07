@@ -5,6 +5,22 @@ var cartBtn = document.getElementsByClassName('open-cart');
 for (var i = 0; i < cartBtn.length; i++) {
 	cartBtn[i].onclick = openCart; //кожному елементу присвоїти ф-цію openCart
 }
+// Отримати всі посилання які відкривають корзину за класом open-cart
+var videoBtn = document.getElementsByClassName('open-video');
+for (var i = 0; i < videoBtn.length; i++) {
+	videoBtn[i].onclick = function () {
+		video.style.display = 'flex';
+		document.body.style.overflowY = 'hidden';
+	}
+}
+video.onclick = function () {
+	if(event.target.id == 'video')
+	{
+		video.style.display = 'none';
+		document.body.style.overflowY = 'auto';
+	}
+};
+
 // Отримати всі кнопки які є в section.rooms article
 var buyBtn = document.querySelectorAll('section.rooms article button');
 for (var i = 0; i < buyBtn.length; i++) {
@@ -16,6 +32,7 @@ cart.onclick = function () {
 	if(event.target.id == 'cart')
 		cart.style.display = 'none';
 };
+
 function openCart () {
 	event.preventDefault();
 	cart.style.display = 'flex';
@@ -52,9 +69,8 @@ function addProductToCart() {
 	td4.appendChild(input); // додаємо клітинку до рядка
 	tr.appendChild(td4); // додаємо клітинку до рядка
 
-	var td5 = document.createElement('td'); // створюємо 5-у клітинку
-	td5.innerText = price; // клітинці 5 задаємо текст "$50000"
-	tr.appendChild(td5); // додаємо клітинку до рядка
+	// td5
+	tr.appendChild(td3.cloneNode(true)); // додаємо клона (копію) td3 клітинку до рядка
 
 	var td6 = document.createElement('td'); // створюємо 6-у клітинку
 	var button = document.createElement('button'); // створюємо button
