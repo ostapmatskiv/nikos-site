@@ -53,6 +53,7 @@ header nav .submenu div a i {
 	right: 10px;
 }
 header nav .submenu div:hover { background-color: #f7f7f9 }
+header #mobMenuBtn { display: none }
 header h1,
 header h4,
 header div:last-child a {
@@ -209,6 +210,8 @@ footer form input[type=submit]
 }
 footer .social {
 	justify-content: center;
+	max-width: 280px;
+	margin: auto;
 }
 footer .social a {margin: 25px;}
 footer .social a i {font-size: 35px;color: #fff;}
@@ -288,4 +291,67 @@ footer .social a i {font-size: 35px;color: #fff;}
 	display: none;
 	justify-content: center;
 	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+	header { background-size: auto 100%; }
+	header nav {
+		position: fixed;
+		width: 0;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: rgba(0,0,0,0.9);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: all 1s;
+		overflow: hidden;
+	}
+	header #mobMenuBtn {
+		display: block;
+	    font-size: 30px;
+    	color: #fff;
+	}
+	header #mobMenuBtn:hover + nav {
+		width: calc(100% - 61px);
+	}
+	header #arrow-left, header #arrow-right { display: none; }
+	section.rooms article,
+	section.photos .small,
+	section.photos .big
+	{ width: 100%; }
+	section.photos { height: auto; flex-wrap: wrap; }
+	section.photos img { margin-top: 20px; }
+
+	footer { padding: 20px; }
+	footer form {width: 100%;padding: 20px;}
+	footer .social a {margin: 15px auto;}
+	#video iframe { height: 300px; }
+	#cart div {
+		width: 90%;
+		padding: 20px 5px;
+		min-width: auto;
+	}
+	#cart table td { max-width: 100px }
+	#cart table td:first-child,
+	#cart table td:nth-child(3)
+	{
+		display: none;
+	}
 }

@@ -1,4 +1,4 @@
-skrollr.init();
+// skrollr.init();
 
 // Отримати всі посилання які відкривають корзину за класом open-cart
 var cartBtn = document.getElementsByClassName('open-cart');
