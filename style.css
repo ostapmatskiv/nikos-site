@@ -125,6 +125,7 @@ section.rooms article:hover {
 section.rooms article:hover img { transform: scale(1.15) rotate(5deg) }
 
 footer {
+	margin-top: 200px;
 	background: #343746;
 	padding: 50px;
 }
@@ -180,7 +181,6 @@ footer form input[type=submit]
 }
 footer .social {
 	justify-content: center;
-	margin-top: 30px;
 }
 footer .social a {margin: 25px;}
 footer .social a i {font-size: 35px;color: #fff;}
