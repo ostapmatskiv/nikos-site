@@ -145,6 +145,12 @@ section.photos .big img {
 	object-fit: cover;
 	object-position: center;
 }
+section.photos img {
+	transition: all 1s;
+}
+section.photos img:hover {
+	transform: rotateY(180deg) scale(1.1);
+}
 
 footer {
 	margin-top: 200px;
@@ -262,7 +268,12 @@ footer .social a i {font-size: 35px;color: #fff;}
 	text-align: right;
 	font-weight: bold;
 }
+#cart table input {
+	width: 100px;
+	padding: 5px;
+}
 #cart table button {
 	background: none;
 	border: none;
+	cursor: pointer;
 }

@@ -12,7 +12,10 @@ for (var i = 0; i < buyBtn.length; i++) {
 }
 //іконці "хрестик" в корзині присвоїти подію "Закрити корзину"
 document.querySelector('#cart div > i.fa-times-circle').onclick = closeCart;
-
+cart.onclick = function () {
+	if(event.target.id == 'cart')
+		cart.style.display = 'none';
+};
 function openCart () {
 	event.preventDefault();
 	cart.style.display = 'flex';
