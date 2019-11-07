@@ -124,6 +124,28 @@ section.rooms article:hover {
 }
 section.rooms article:hover img { transform: scale(1.15) rotate(5deg) }
 
+section.photos {
+	height: 500px;
+}
+section.photos .small {
+	width: 30%;
+	height: 100%; 
+}
+section.photos .small img {
+	width: 100%;
+	height: calc(50% - 5px);
+}
+section.photos .big {
+	width: calc(70% - 10px);
+	height: 100%;
+}
+section.photos .big img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
 footer {
 	margin-top: 200px;
 	background: #343746;
