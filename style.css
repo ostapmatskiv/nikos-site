@@ -124,6 +124,66 @@ section.rooms article:hover {
 }
 section.rooms article:hover img { transform: scale(1.15) rotate(5deg) }
 
+footer {
+	background: #343746;
+	padding: 50px;
+}
+footer form {
+	background: #fff;
+    position: relative;
+    width: 590px;
+    min-height: 350px;
+    margin: 0 auto;
+    padding: 40px 70px;
+}
+footer form * { display: block; width: 100%; }
+footer form h4 { font-size: 28px; font-weight: 500; margin-bottom: 20px; }
+footer form label {
+	font-size: 16px;
+	font-weight: 400;
+	margin: 10px 0;
+	font-family: arial
+}
+footer form input,
+footer form textarea
+{
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+     margin-bottom: 20px;
+}
+footer form textarea { height: 120px; }
+footer form input[type=submit]
+{
+    background: linear-gradient(#2083fe,#1d7bf0);
+    border: 0;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    width: auto;
+    margin: auto;
+    box-shadow: rgba(23,43,99,.24) 0 7px 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 12px 23px;
+    text-shadow: 1px 1px rgba(0,0,0,.09);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+footer .social {
+	justify-content: center;
+	margin-top: 30px;
+}
+footer .social a {margin: 25px;}
+footer .social a i {font-size: 35px;color: #fff;}
 
 #cart {
 	position: fixed;
